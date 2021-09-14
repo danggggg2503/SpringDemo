@@ -61,4 +61,17 @@ class SpringdemoApplicationTests {
 		System.out.println("student get by email native name param:" + student);
 	}
 
+	//jpql
+	@Test
+	void getStudentByEmailJPQL(){
+		Student student = studentRepository.getStudentByEmail("vudang24.it@gmail");
+		System.out.println("student get by email JPQL:" + student);
+	}
+
+	@Test
+	void getStudentByFLNameJPQL(){
+		Student student = studentRepository.getStudentByFLName("khanh", "dang");
+		System.out.println("student get by FirstName and LastName JPQL:" + student);
+	}
+
 }

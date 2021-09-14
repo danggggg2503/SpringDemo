@@ -48,4 +48,17 @@ class SpringdemoApplicationTests {
 				student.getFirstName()+"",student.getLastName()+"","vudang24.it@gmail.com"));
 	}
 
+	// native
+	@Test
+	void getStudentByEmailNative(){
+		Student student = studentRepository.getStudentByEmailNative("vudang24.it@gmail.com");
+		System.out.println("student get by email native" + student);
+	}
+
+	@Test
+	void getStudentByEmailNativeNameParam(){
+		Student student = studentRepository.getStudentByEmailNativeNameParam("vudang24.it@gmail.com");
+		System.out.println("student get by email native name param:" + student);
+	}
+
 }
